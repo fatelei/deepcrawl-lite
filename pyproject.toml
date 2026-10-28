@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepcrawl-lite"
+version = "0.1.0"
+description = "Resumable content collection using DeepSeek Search and Fetch"
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.27,<0.29"]
+
+[project.scripts]
+deepcrawl = "deepcrawl.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["deepcrawl*"]
